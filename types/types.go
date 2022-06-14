@@ -1,5 +1,7 @@
 package types
 
+import "errors"
+
 type Money int64
 type PaymentCategory string
 type PaymentStatus string
@@ -10,12 +12,9 @@ const (
 	PaymentStatusInProgress PaymentStatus = "INPROGRESS"
 )
 
-type Payment struct {
-	ID       string
-	Amount   Money
-	Category PaymentCategory
-	Status   PaymentStatus
-}
+var (
+	ErrPaymentNotFound = errors.New("err payment not found")
+)
 
 type Phone string
 type Account struct {

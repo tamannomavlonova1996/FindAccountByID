@@ -21,5 +21,5 @@ func FindAccountByID(accountID int64) (*types.Account, error) {
 		}
 	}
 
-	return nil, errors.New("dsds")
+	return nil, errors.New("ошибка")
 }
